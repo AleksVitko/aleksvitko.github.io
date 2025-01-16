@@ -4,81 +4,16 @@
     <meta charset="utf-8">
     <title>ТЕСТ САЙТ HTML</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-      body {
-        cursor: url('img/mouse_cursor.png'), auto; /* Путь к изображению курсора */
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.1);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      .cat.pulsating {
-        animation: pulse 2s infinite;
-      }
-
-      .eye {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background-color: white;
-        border-radius: 50%;
-        border: 2px solid black;
-        overflow: hidden;
-      }
-
-      .pupil {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background-color: black;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
   </head>
   <body>
     <main>
       <a href="https://crupno.github.io">
-        <div class="eye-container">
-          <div class="eye">
-            <div class="pupil"></div>
-          </div>
-          <div class="eye" style="left: 60px;">
-            <div class="pupil"></div>
-          </div>
-        </div>
+        <img src="img/bane.svg" width="300" height="300" alt="ТЕСТ САЙТ HTML" class="cat pulsating">
       </a>
       <h1>ТЕСТ САЙТ HTML</h1>
-      <img src="img/bane.svg" width="300" height="300" alt="ТЕСТ САЙТ HTML" class="cat pulsating">
       <p>
         <a href="https://github.com/crupno/crupno.github.io">github.com/crupno/crupno.github.io</a>
       </p>
     </main>
-
-    <script>
-      document.addEventListener('mousemove', function(e) {
-        const eyeContainers = document.querySelectorAll('.eye-container');
-        eyeContainers.forEach(container => {
-          const eye = container.querySelector('.eye');
-          const pupil = container.querySelector('.pupil');
-          const x = eye.offsetLeft + eye.offsetWidth / 2;
-          const y = eye.offsetTop + eye.offsetHeight / 2;
-          const radian = Math.atan2(e.pageX - x, e.pageY - y);
-          const rot = radian * (180 / Math.PI) * -1 + 270;
-          pupil.style.transform = `translate(-50%, -50%) rotate(${rot}deg)`;
-        });
-      });
-    </script>
   </body>
 </html>
