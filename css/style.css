@@ -51,3 +51,20 @@ a:link, a:visited {
 a:hover {
   text-decoration: none
 }
+/* Анимация вращения */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img.cat {
+  transition: transform 0.5s ease;
+}
+
+img.cat:hover {
+  animation: rotate 2s linear infinite;
+}
