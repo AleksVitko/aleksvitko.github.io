@@ -1,19 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>ТЕСТ САЙТ HTML</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <main>
-      <a href="https://crupno.github.io">
-        <img src="img/bane.svg" width="300" height="300" alt="ТЕСТ САЙТ HTML" class="cat pulsating">
-      </a>
-      <h1>ТЕСТ САЙТ HTML</h1>
-      <p>
-        <a href="https://github.com/crupno/crupno.github.io">github.com/crupno/crupno.github.io</a>
-      </p>
-    </main>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме Программиста</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Имя Фамилия</h1>
+        <p>Программист / Разработчик</p>
+    </header>
+
+    <section class="parallax-section">
+        <div class="parallax-image"></div>
+        <div class="content">
+            <h2>О себе</h2>
+            <p>Здесь вы можете рассказать немного о себе и своих достижениях.</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Навыки</h2>
+        <div class="skill-list">
+            <div class="skill-item" onclick="toggleSkillList('list1')">
+                <span>Языки программирования</span>
+                <i class="arrow-down"></i>
+            </div>
+            <ul id="list1" class="hidden">
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>C++</li>
+            </ul>
+
+            <div class="skill-item" onclick="toggleSkillList('list2')">
+                <span>Фреймворки</span>
+                <i class="arrow-down"></i>
+            </div>
+            <ul id="list2" class="hidden">
+                <li>React.js</li>
+                <li>Django</li>
+                <li>Node.js</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>Примеры работ</h2>
+        <div class="project animate">
+            <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 1">
+            <h3>Проект 1</h3>
+            <div class="project-content">
+                <p>Описание проекта 1...</p>
+                <a href="https://example.com/project1" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+        <div class="project animate">
+            <img src="images/mad-designer.png" alt="Проект 2">
+            <h3>Проект 2</h3>
+            <div class="project-content">
+                <p>Описание проекта 2...</p>
+                <a href="https://example.com/project2" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+        <div class="project animate">
+            <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 3">
+            <h3>Проект 3</h3>
+            <div class="project-content">
+                <p>Описание проекта 3...</p>
+                <a href="https://example.com/project3" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+        <div class="project animate">
+            <img src="images/mad-designer.png" alt="Проект 4">
+            <h3>Проект 4</h3>
+            <div class="project-content">
+                <p>Описание проекта 4...</p>
+                <a href="https://example.com/project4" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+        <div class="project animate">
+            <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 5">
+            <h3>Проект 5</h3>
+            <div class="project-content">
+                <p>Описание проекта 5...</p>
+                <a href="https://example.com/project5" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+        <div class="project animate">
+            <img src="images/mad-designer.png" alt="Проект 6">
+            <h3>Проект 6</h3>
+            <div class="project-content">
+                <p>Описание проекта 6...</p>
+                <a href="https://example.com/project6" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+        <div class="project animate">
+            <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 7">
+            <h3>Проект 7</h3>
+            <div class="project-content">
+                <p>Описание проекта 7...</p>
+                <a href="https://example.com/project7" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+        <div class="project animate">
+            <img src="images/mad-designer.png" alt="Проект 8">
+            <h3>Проект 8</h3>
+            <div class="project-content">
+                <p>Описание проекта 8...</p>
+                <a href="https://example.com/project8" target="_blank" class="project-link">Перейти к проекту</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Имя Фамилия. Все права защищены.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
