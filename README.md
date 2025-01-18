@@ -1,2 +1,2 @@
-# rezume.github.io
+# crupno.github.io
 Мой первый хостинг испытанный.
