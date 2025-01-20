@@ -1,11 +1,27 @@
 function toggleSkillList(id) {
-    const list = document.getElementById(id);
-    if (list.classList.contains('hidden')) {
-        list.classList.remove('hidden');
-        list.previousElementSibling.querySelector('.arrow-down').style.transform = 'rotate(180deg)';
+    // Получаем все элементы ul с классом hidden
+    const allLists = document.querySelectorAll('.skill-list ul');
+    
+    // Закрываем все списки и возвращаем стрелки в исходное положение
+    allLists.forEach(list => {
+        if (list.id !== id) {
+            list.classList.add('hidden');
+            if (list.previousElementSibling) {
+                list.previousElementSibling.querySelector('.arrow-down').style.transform = 'rotate(0deg)';
+            }
+        }
+    });
+
+    // Получаем текущий список по id
+    const currentList = document.getElementById(id);
+
+    // Переключаем состояние текущего списка
+    if (currentList.classList.contains('hidden')) {
+        currentList.classList.remove('hidden');
+        currentList.previousElementSibling.querySelector('.arrow-down').style.transform = 'rotate(180deg)';
     } else {
-        list.classList.add('hidden');
-        list.previousElementSibling.querySelector('.arrow-down').style.transform = 'rotate(0deg)';
+        currentList.classList.add('hidden');
+        currentList.previousElementSibling.querySelector('.arrow-down').style.transform = 'rotate(0deg)';
     }
 }
 

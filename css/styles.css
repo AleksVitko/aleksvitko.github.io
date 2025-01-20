@@ -1,0 +1,350 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Глобальные переменные */
+:root {
+    --primary-color: #591212;
+    --secondary-color: rgba(0, 0, 0, 0.5);
+    --light-bg: #fff;
+    --dark-bg: #333;
+    --transition-speed: 0.3s;
+}
+
+/* Анимация fadeInUp */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовок */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px 30px;
+}
+.header-content h1,
+.header-content p {
+    position: relative;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-out;
+}
+.header-content h1 {
+    margin: 0;
+    font-size: 28px;
+}
+.header-content p {
+    margin: 0;
+    font-size: 16px; /* Уменьшили размер шрифта для текста с контактами */
+    max-width: 400px; /* Ограничение ширины текста для лучшего отображения на больших экранах */
+    word-wrap: break-word; /* Разрешаем перенос слов */
+}
+
+.header-content a {
+    color: white;
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+.header-content a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color var(--transition-speed);
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Параллакс секция */
+.parallax-section {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+.parallax-image {
+    background: url('../images/tfq0bghnk3e63iho4m9jg9lztxllzuhp.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    z-index: -1;
+}
+.parallax-section .content {
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+}
+
+/* Секция навыков */
+.skills {
+    padding: 50px;
+    background: #f4f4f4;
+}
+.skill-list {
+    list-style: none;
+}
+.skill-item {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill-item span {
+    font-weight: bold;
+}
+.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    transition: transform var(--transition-speed);
+}
+.hidden {
+    display: none;
+}
+
+/* Портфолио */
+.portfolio {
+    padding: 50px;
+    background: var(--light-bg);
+}
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project {
+    flex: 1 1 calc(33.333% - 40px); /* 3 элемента в ряд */
+    max-width: calc(33.333% - 40px);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.project img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.project:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.project h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: var(--dark-bg);
+    transition: color var(--transition-speed);
+}
+.project:hover h3 {
+    color: var(--primary-color);
+}
+.project-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-speed) ease-out, visibility var(--transition-speed) ease-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+}
+.project:hover .project-content {
+    opacity: 1;
+    visibility: visible;
+}
+.project p {
+    margin-bottom: 10px;
+    color: #666;
+}
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: background var(--transition-speed);
+}
+.project-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+    pointer-events: none;
+}
+.project-link:hover::before {
+    opacity: 1;
+}
+.project-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all var(--transition-speed);
+    opacity: 0;
+    pointer-events: none;
+}
+.project-link:hover::after {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+}
+.project-link:hover {
+    background: #555;
+}
+
+/* Футер */
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Анимация появления элементов */
+.animate {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(20px);
+}
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 1200px) {
+    .parallax-section {
+        height: 300px;
+    }
+    .parallax-section .content {
+        padding: 30px;
+    }
+    .skills {
+        padding: 30px;
+    }
+    .portfolio {
+        padding: 30px;
+    }
+    .project {
+        flex: 1 1 calc(50% - 40px); /* 2 элемента в ряд */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+    .header-content {
+        text-align: center;
+    }
+    .header-content h1 {
+        font-size: 24px;
+    }
+    .header-content p {
+        font-size: 14px; /* Уменьшение размера шрифта для мобильных устройств */
+        max-width: 100%; /* Полная ширина для текста на маленьких экранах */
+    }
+    .social-links {
+        margin-top: 10px;
+    }
+    .social-links a {
+        font-size: 14px; /* Уменьшение размера шрифта для социальных сетей */
+    }
+
+    .project {
+        flex: 1 1 calc(100% - 40px); /* 1 элемент в ряд */
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax-section {
+        height: 200px;
+    }
+    .parallax-section .content {
+        padding: 20px;
+    }
+    .skill-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .arrow-down {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 20px 0;
+    }
+    .project h3 {
+        font-size: 1.1em;
+    }
+    footer {
+        padding: 15px 0;
+    }
+}
