@@ -1,4 +1,4 @@
-/* Общие стили */
+/* ГЋГЎГ№ГЁГҐ Г±ГІГЁГ«ГЁ */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     color: #333;
 }
 
-/* Глобальные переменные */
+/* ГѓГ«Г®ГЎГ Г«ГјГ­Г»ГҐ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ */
 :root {
     --primary-color: #591212;
     --secondary-color: rgba(0, 0, 0, 0.5);
@@ -20,7 +20,7 @@ body {
     --transition-speed: 0.3s;
 }
 
-/* Анимация fadeInUp */
+/* ГЂГ­ГЁГ¬Г Г¶ГЁГї fadeInUp */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -32,7 +32,7 @@ body {
     }
 }
 
-/* Заголовок */
+/* Г‡Г ГЈГ®Г«Г®ГўГ®ГЄ */
 .header {
     display: flex;
     justify-content: space-between;
@@ -53,9 +53,9 @@ body {
 }
 .header-content p {
     margin: 0;
-    font-size: 16px; /* Уменьшили размер шрифта для текста с контактами */
-    max-width: 400px; /* Ограничение ширины текста для лучшего отображения на больших экранах */
-    word-wrap: break-word; /* Разрешаем перенос слов */
+    font-size: 16px; /* Г“Г¬ГҐГ­ГјГёГЁГ«ГЁ Г°Г Г§Г¬ГҐГ° ГёГ°ГЁГґГІГ  Г¤Г«Гї ГІГҐГЄГ±ГІГ  Г± ГЄГ®Г­ГІГ ГЄГІГ Г¬ГЁ */
+    max-width: 400px; /* ГЋГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГҐ ГёГЁГ°ГЁГ­Г» ГІГҐГЄГ±ГІГ  Г¤Г«Гї Г«ГіГ·ГёГҐГЈГ® Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГї Г­Г  ГЎГ®Г«ГјГёГЁГµ ГЅГЄГ°Г Г­Г Гµ */
+    word-wrap: break-word; /* ГђГ Г§Г°ГҐГёГ ГҐГ¬ ГЇГҐГ°ГҐГ­Г®Г± Г±Г«Г®Гў */
 }
 
 .header-content a {
@@ -81,14 +81,14 @@ body {
     text-decoration: underline;
 }
 
-/* Параллакс секция */
+/* ГЏГ Г°Г Г«Г«Г ГЄГ± Г±ГҐГЄГ¶ГЁГї */
 .parallax-section {
     position: relative;
     height: 400px;
     overflow: hidden;
 }
 .parallax-image {
-    background: url('../images/tfq0bghnk3e63iho4m9jg9lztxllzuhp.jpg') no-repeat center center/cover;
+    background: url('../images/flr2.gif') no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -106,7 +106,7 @@ body {
     text-align: center;
 }
 
-/* Секция навыков */
+/* Г‘ГҐГЄГ¶ГЁГї Г­Г ГўГ»ГЄГ®Гў */
 .skills {
     padding: 50px;
     background: #f4f4f4;
@@ -140,7 +140,7 @@ body {
     display: none;
 }
 
-/* Портфолио */
+/* ГЏГ®Г°ГІГґГ®Г«ГЁГ® */
 .portfolio {
     padding: 50px;
     background: var(--light-bg);
@@ -156,7 +156,7 @@ body {
     gap: 20px;
 }
 .project {
-    flex: 1 1 calc(33.333% - 40px); /* 3 элемента в ряд */
+    flex: 1 1 calc(33.333% - 40px); /* 3 ГЅГ«ГҐГ¬ГҐГ­ГІГ  Гў Г°ГїГ¤ */
     max-width: calc(33.333% - 40px);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -253,7 +253,7 @@ body {
     background: #555;
 }
 
-/* Футер */
+/* Г”ГіГІГҐГ° */
 footer {
     background: var(--primary-color);
     color: #fff;
@@ -261,7 +261,7 @@ footer {
     padding: 20px 0;
 }
 
-/* Анимация появления элементов */
+/* ГЂГ­ГЁГ¬Г Г¶ГЁГї ГЇГ®ГїГўГ«ГҐГ­ГЁГї ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў */
 .animate {
     opacity: 0;
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -272,7 +272,7 @@ footer {
     transform: translateY(0);
 }
 
-/* Медиазапросы для адаптивности */
+/* ГЊГҐГ¤ГЁГ Г§Г ГЇГ°Г®Г±Г» Г¤Г«Гї Г Г¤Г ГЇГІГЁГўГ­Г®Г±ГІГЁ */
 @media (max-width: 1200px) {
     .parallax-section {
         height: 300px;
@@ -287,7 +287,7 @@ footer {
         padding: 30px;
     }
     .project {
-        flex: 1 1 calc(50% - 40px); /* 2 элемента в ряд */
+        flex: 1 1 calc(50% - 40px); /* 2 ГЅГ«ГҐГ¬ГҐГ­ГІГ  Гў Г°ГїГ¤ */
         max-width: calc(50% - 40px);
     }
 }
@@ -305,18 +305,18 @@ footer {
         font-size: 24px;
     }
     .header-content p {
-        font-size: 14px; /* Уменьшение размера шрифта для мобильных устройств */
-        max-width: 100%; /* Полная ширина для текста на маленьких экранах */
+        font-size: 14px; /* Г“Г¬ГҐГ­ГјГёГҐГ­ГЁГҐ Г°Г Г§Г¬ГҐГ°Г  ГёГ°ГЁГґГІГ  Г¤Г«Гї Г¬Г®ГЎГЁГ«ГјГ­Г»Гµ ГіГ±ГІГ°Г®Г©Г±ГІГў */
+        max-width: 100%; /* ГЏГ®Г«Г­Г Гї ГёГЁГ°ГЁГ­Г  Г¤Г«Гї ГІГҐГЄГ±ГІГ  Г­Г  Г¬Г Г«ГҐГ­ГјГЄГЁГµ ГЅГЄГ°Г Г­Г Гµ */
     }
     .social-links {
         margin-top: 10px;
     }
     .social-links a {
-        font-size: 14px; /* Уменьшение размера шрифта для социальных сетей */
+        font-size: 14px; /* Г“Г¬ГҐГ­ГјГёГҐГ­ГЁГҐ Г°Г Г§Г¬ГҐГ°Г  ГёГ°ГЁГґГІГ  Г¤Г«Гї Г±Г®Г¶ГЁГ Г«ГјГ­Г»Гµ Г±ГҐГІГҐГ© */
     }
 
     .project {
-        flex: 1 1 calc(100% - 40px); /* 1 элемент в ряд */
+        flex: 1 1 calc(100% - 40px); /* 1 ГЅГ«ГҐГ¬ГҐГ­ГІ Гў Г°ГїГ¤ */
         max-width: calc(100% - 40px);
     }
 }
