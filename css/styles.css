@@ -1,4 +1,4 @@
-/* Îáùèå ñòèëè */
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +10,7 @@ body {
     background: #f4f4f4;
     color: #333;
 }
-
-/* Ãëîáàëüíûå ïåðåìåííûå */
+/* Глобальные переменные */
 :root {
     --primary-color: #591212;
     --secondary-color: rgba(0, 0, 0, 0.5);
@@ -19,8 +18,7 @@ body {
     --dark-bg: #333;
     --transition-speed: 0.3s;
 }
-
-/* Àíèìàöèÿ fadeInUp */
+/* Анимация fadeInUp */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -31,8 +29,7 @@ body {
         transform: translateY(0);
     }
 }
-
-/* Çàãîëîâîê */
+/* Заголовок */
 .header {
     display: flex;
     justify-content: space-between;
@@ -40,22 +37,28 @@ body {
     background: var(--primary-color);
     color: #fff;
     padding: 20px 30px;
+    transition: all 0.3s ease-in-out; /* Плавное изменение всех свойств */
+    position: relative; /* Добавляем позиционирование */
+    z-index: 1000; /* Убедитесь, что шапка находится поверх всего контента */
 }
+
 .header-content h1,
 .header-content p {
     position: relative;
     font-weight: bold;
     animation: fadeInUp 1s ease-out;
 }
+
 .header-content h1 {
     margin: 0;
     font-size: 28px;
 }
+
 .header-content p {
     margin: 0;
-    font-size: 16px; /* Óìåíüøèëè ðàçìåð øðèôòà äëÿ òåêñòà ñ êîíòàêòàìè */
-    max-width: 400px; /* Îãðàíè÷åíèå øèðèíû òåêñòà äëÿ ëó÷øåãî îòîáðàæåíèÿ íà áîëüøèõ ýêðàíàõ */
-    word-wrap: break-word; /* Ðàçðåøàåì ïåðåíîñ ñëîâ */
+    font-size: 16px; /* Уменьшили размер шрифта для текста с контактами */
+    max-width: 400px; /* Ограничение ширины текста для лучшего отображения на больших экранах */
+    word-wrap: break-word; /* Разрешаем перенос слов */
 }
 
 .header-content a {
@@ -63,6 +66,7 @@ body {
     text-decoration: none;
     transition: color var(--transition-speed);
 }
+
 .header-content a:hover {
     text-decoration: underline;
 }
@@ -70,25 +74,54 @@ body {
 .social-links {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .social-links a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     transition: color var(--transition-speed);
 }
+
 .social-links a:hover {
     text-decoration: underline;
 }
 
-/* Ïàðàëëàêñ ñåêöèÿ */
+/* Стили для фиксированной шапки */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 30px; /* Уменьшаем отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень для эффекта выделенности */
+    transform: translateY(-100%); /* Сдвигаем шапку вверх */
+    transition: transform 0.3s ease-in-out; /* Плавное перемещение шапки */
+}
+
+.sticky-header.active {
+    transform: translateY(0); /* Возвращаем шапку в исходное положение */
+}
+
+.sticky-header .header-content h1 {
+    display: none; /* Скрываем имя и фамилию */
+}
+
+.sticky-header .header-content p {
+    font-size: 14px; /* Дополнительно уменьшаем шрифт при необходимости */
+}
+
+/* Параллакс секция */
 .parallax-section {
     position: relative;
-    height: 400px;
     overflow: hidden;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Занимает всю высоту экрана */
 }
 .parallax-image {
-    background: url('../images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg') no-repeat center center/cover;
+    background: url('../images/article-placeholder-1920.webp') no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -96,6 +129,7 @@ body {
     height: 100%;
     background-attachment: fixed;
     z-index: -1;
+    opacity: 0.7; /* Прозрачность фона */
 }
 .parallax-section .content {
     position: relative;
@@ -104,9 +138,12 @@ body {
     background: var(--secondary-color);
     color: #fff;
     text-align: center;
+    .max-width: 800px;
+    margin: 0 auto;
+    height: calc(100% - 1px); /* Вычитаем высоту паддинга сверху и снизу */
+    overflow-y: auto; /* Добавляем прокрутку, если текст не помещается */
 }
-
-/* Ñåêöèÿ íàâûêîâ */
+/* Секция навыков */
 .skills {
     padding: 50px;
     background: #f4f4f4;
@@ -139,8 +176,7 @@ body {
 .hidden {
     display: none;
 }
-
-/* Ïîðòôîëèî */
+/* Портфолио */
 .portfolio {
     padding: 50px;
     background: var(--light-bg);
@@ -156,7 +192,7 @@ body {
     gap: 20px;
 }
 .project {
-    flex: 1 1 calc(33.333% - 40px); /* 3 ýëåìåíòà â ðÿä */
+    flex: 1 1 calc(33.333% - 40px); /* 3 элемента в ряд */
     max-width: calc(33.333% - 40px);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -252,16 +288,14 @@ body {
 .project-link:hover {
     background: #555;
 }
-
-/* Ôóòåð */
+/* Футер */
 footer {
     background: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
-
-/* Àíèìàöèÿ ïîÿâëåíèÿ ýëåìåíòîâ */
+/* Анимация появления элементов */
 .animate {
     opacity: 0;
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -271,14 +305,14 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Ìåäèàçàïðîñû äëÿ àäàïòèâíîñòè */
+/* Медиазапросы для адаптивности */
 @media (max-width: 1200px) {
     .parallax-section {
-        height: 300px;
+        height: 100vh;
     }
     .parallax-section .content {
         padding: 30px;
+        height: calc(100% - 60px); /* Вычитаем высоту паддинга сверху и снизу */
     }
     .skills {
         padding: 30px;
@@ -287,16 +321,15 @@ footer {
         padding: 30px;
     }
     .project {
-        flex: 1 1 calc(50% - 40px); /* 2 ýëåìåíòà â ðÿä */
+        flex: 1 1 calc(50% - 40px); /* 2 элемента в ряд */
         max-width: calc(50% - 40px);
     }
 }
-
 @media (max-width: 992px) {
     .header {
         flex-direction: column;
         align-items: center;
-        padding: 30px 0;
+        padding: 0 0;
     }
     .header-content {
         text-align: center;
@@ -305,41 +338,43 @@ footer {
         font-size: 24px;
     }
     .header-content p {
-        font-size: 14px; /* Óìåíüøåíèå ðàçìåðà øðèôòà äëÿ ìîáèëüíûõ óñòðîéñòâ */
-        max-width: 100%; /* Ïîëíàÿ øèðèíà äëÿ òåêñòà íà ìàëåíüêèõ ýêðàíàõ */
+        font-size: 14px; /* Уменьшение размера шрифта для мобильных устройств */
+        max-width: 100%; /* Полная ширина для текста на маленьких экранах */
     }
     .social-links {
         margin-top: 10px;
     }
     .social-links a {
-        font-size: 14px; /* Óìåíüøåíèå ðàçìåðà øðèôòà äëÿ ñîöèàëüíûõ ñåòåé */
+        font-size: 14px; /* Уменьшение размера шрифта для социальных сетей */
     }
-
     .project {
-        flex: 1 1 calc(100% - 40px); /* 1 ýëåìåíò â ðÿä */
+        flex: 1 1 calc(100% - 40px); /* 1 элемент в ряд */
         max-width: calc(100% - 40px);
-    }
-}
-
-@media (max-width: 768px) {
-    .parallax-section {
-        height: 200px;
     }
     .parallax-section .content {
         padding: 20px;
+        height: calc(100% - 40px); /* Вычитаем высоту паддинга сверху и снизу */
+    }
+}
+@media (max-width: 768px) {
+    .parallax-section {
+        height: 100vh;
+    }
+    .parallax-section .content {
+        padding: 20px;
+        height: calc(100% - 40px); /* Вычитаем высоту паддинга сверху и снизу */
     }
     .skill-item {
-        flex-direction: column;
+        /*flex-direction: column;*/
         align-items: flex-start;
     }
     .arrow-down {
         margin-top: 10px;
     }
 }
-
 @media (max-width: 576px) {
     .header {
-        padding: 20px 0;
+        /*padding: 20px 0;*/
     }
     .project h3 {
         font-size: 1.1em;
@@ -347,4 +382,87 @@ footer {
     footer {
         padding: 15px 0;
     }
+    .parallax-section .content {
+        padding: 15px;
+        height: calc(100% - 30px); /* Вычитаем высоту паддинга сверху и снизу */
+    }
 }
+
+.hidden-text {
+    display: none;
+}
+
+#toggleButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #8f2020;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#toggleButton:hover {
+    background-color: #591212;
+}
+
+/* Стили для языкового переключателя */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.language-switcher button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.language-switcher button:hover {
+    color: #ccc;
+}
+
+.language-switcher .separator {
+    color: white;
+    font-size: 16px;
+}
+
+/*=====================================================*/
+.hidden {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: visibility 0s, height 0.3s ease-out;
+}
+
+.visible {
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    transition: visibility 0s, height 0.3s ease-in;
+}
+
+.skill-icons-list {
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование (если необходимо) */
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы по умолчанию */
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+
+.skill-icon {
+    width: 64px;
+    height: 64px;
+    margin: 10px; /* Отступы между иконками */
+    cursor: pointer; /* Изменяем курсор на пальчик при наведении */
+}
+
