@@ -5,168 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме Программиста</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Подключение библиотеки AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-     <header class="header">
+    <header class="header">
         <div class="header-content">
-            <h1>Иван Иванов</h1>
+            <h1 data-i18n="headerTitle">Александр Витко</h1>
             <p>
-                <a href="mailto:ivan.ivanov@email.com">ivan.ivanov@email.com</a> | 
-                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                <a href="mailto:sasavitko552@gmail.com" data-i18n="email">sasavitko552@gmail.com</a> | 
+                <a href="tel:+375293608184" data-i18n="phone">+375 (29) 360-81-84</a>
             </p>
         </div>
+        <div class="language-switcher">
+            <button onclick="setLanguage('ru')">РУС</button>
+            <span class="separator">|</span>
+            <button onclick="setLanguage('by')">БЕЛ</button>
+            <span class="separator">|</span>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
         <div class="social-links">
-            <a href="https://t.me/your_telegram" target="_blank">Telegram</a>
-            <a href="viber://chat?number=+79991234567" target="_blank">Viber</a>
-            <a href="https://wa.me/+79991234567" target="_blank">WhatsApp</a>
-            <a href="https://facebook.com/your_facebook" target="_blank">Facebook</a>
-            <a href="https://linkedin.com/in/your_linkedin" target="_blank">LinkedIn</a>
-            <a href="https://vk.com/your_vk" target="_blank">VK</a>
-            <a href="https://github.com/your_github" target="_blank">GitHub</a>
+            <a href="https://t.me/saitgotovi" target="_blank"><img src="images/telegram.png" alt="Telegram" title="Telegram"></a>
+            <a href="viber://chat?number=+375292973050" target="_blank"><img src="images/viber.png" alt="Viber" title="Viber"></a>
+            <a href="https://wa.me/+375292973050" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp" title="WhatsApp"></a>
+            <a href="https://www.facebook.com/profile.php?id=100043292194624" target="_blank"><img src="images/facebook.png" alt="Facebook" title="Facebook"></a>
+            <a href="https://linkedin.com/in/александр-витко-3a3242202" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
+            <a href="https://vk.com/sautigotovie" target="_blank"><img src="images/vk.png" alt="VK" title="VK"></a>
+            <a href="https://github.com/AleksVitko" target="_blank"><img src="images/github.png" alt="GitHub" title="GitHub"></a>
         </div>
     </header>
-
     <section class="parallax-section">
         <div class="parallax-image"></div>
         <div class="content">
-            <h2>О себе</h2>
-            <p>Целеустремленный и креативный программист с более чем 13 годами опыта разработки веб-приложений, мобильных решений и серверных систем. Способен работать как индивидуально, так и в команде, обеспечивая высокое качество кода и эффективное взаимодействие с другими специалистами. Ориентирован на создание инновационных продуктов, которые решают реальные проблемы пользователей. Постоянно стремлюсь к профессиональному росту и изучению новых технологий.</p>
+            <h2 data-i18n="aboutMe">О себе</h2>
+            <div class="text-container">
+                <p data-i18n="aboutText1">
+                    Я — целеустремленный и креативный программист с более чем 13 годами опыта разработки веб-приложений, мобильных решений и серверных систем. Мой профессиональный путь начался с простых скриптов на языке программирования Basic еще в школьные годы, а сегодня я занимаюсь созданием сложных и масштабируемых приложений, которые решают реальные проблемы пользователей по всему миру.
+                </p>
+                <p data-i18n="aboutText2">
+                    За эти годы я успел поработать над множеством проектов различной сложности, от небольших стартапов до крупных корпоративных решений. Один из моих первых значимых проектов был связан с созданием системы управления контентом для интернет-магазина, который затем вырос в успешную платформу с тысячами активных пользователей. Этот опыт позволил мне глубже понять принципы работы с клиентами, требованиями и их ожиданиями от продукта.
+                </p>
+                <p data-i18n="aboutText3">
+                    Моя основная специализация лежит в области веб-разработки, где я работаю с такими технологиями, как JavaScript, TypeScript, React, Angular, Vue.js, Node.js и Django. Я также имею богатый опыт в разработке мобильных приложений под Android и iOS, используя такие фреймворки, как React Native и Flutter. Эти технологии позволяют мне создавать кросс-платформенные решения, которые работают одинаково хорошо на всех устройствах и обеспечивают отличный пользовательский опыт.
+                </p>
+                <p data-i18n="aboutText4">
+                    Помимо фронтенда и бэкенда, я также занимался разработкой серверных систем и микросервисной архитектуры. В этом направлении я использовал такие технологии, как Docker, Kubernetes, PostgreSQL, MongoDB, Redis и RabbitMQ. Эти инструменты позволяют создавать высоконадежные и масштабируемые системы, которые могут обрабатывать огромные объемы данных и обеспечивать бесперебойную работу даже при высоких нагрузках.
+                </p>
+                <div class="hidden-text">
+                    <p data-i18n="aboutText5">
+                        В своей работе я всегда стремлюсь к тому, чтобы код был не только функциональным, но и чистым, легко поддерживаемым и расширяемым. Я твердо убежден, что хороший код — это тот, который можно легко понять и модифицировать другим разработчикам. Поэтому я уделяю большое внимание документации, тестированию и рефакторингу. Кроме того, я стараюсь следовать современным методологиям разработки, таким как Agile и Scrum, которые помогают эффективно организовать процесс работы и взаимодействие внутри команды.
+                    </p>
+                    <p data-i18n="aboutText6">
+                        Работая в команде, я всегда стараюсь быть гибким и адаптироваться к текущим условиям. Я умею четко формулировать свои мысли и идеи, а также внимательно слушать других участников команды. Это позволяет нам находить наиболее оптимальные решения и быстро достигать поставленных целей. В то же время, я способен работать самостоятельно и брать на себя ответственность за выполнение задач любой сложности. Независимость и самостоятельность в работе — важные качества, которые я развивал на протяжении всей своей карьеры.
+                    </p>
+                    <p data-i18n="aboutText7">
+                        Инновационные подходы и креативное мышление — это то, что отличает меня как специалиста. Я всегда стараюсь предлагать нестандартные решения, которые могут дать новый импульс развитию проекта. Например, в одном из проектов мне удалось предложить использовать машинное обучение для анализа пользовательских данных и автоматизации рутинных процессов. Этот подход значительно повысил эффективность работы системы и улучшил пользовательский опыт.
+                    </p>
+                    <p data-i18n="aboutText8">
+                        Профессиональный рост и развитие — это одна из главных целей в моей жизни. Я постоянно изучаю новые технологии, читаю книги и статьи, посещаю конференции и вебинары. Это позволяет мне оставаться на переднем крае прогресса и внедрять самые современные решения в свои проекты. В последние годы я активно интересуюсь облачными технологиями, такими как AWS, Google Cloud и Azure, а также искусственным интеллектом и анализом больших данных. Эти направления открывают передо мной новые горизонты и дают возможность создавать действительно уникальные и перспективные продукты.
+                    </p>
+                    <p data-i18n="aboutText9">
+                        Кроме технических навыков, я также уделяю большое внимание развитию своих "мягких" навыков, таких как коммуникация, управление временем и лидерство. Я считаю, что успех любого проекта зависит не только от качественного кода, но и от того, насколько эффективно команда может работать вместе. Поэтому я всегда стараюсь создавать позитивную и поддерживающую атмосферу в коллективе, где каждый участник чувствует себя ценным и значимым.
+                    </p>
+                    <p data-i18n="aboutText10">
+                        Также я активно участвую в сообществе разработчиков. Я регулярно публикую статьи и материалы на тему программирования, делюсь своими знаниями и опытом с другими коллегами. Это не только помогает мне систематизировать свои знания, но и позволяет быть частью большого и дружного сообщества, которое стремится к общему прогрессу.
+                    </p>
+                    <p data-i18n="aboutText11">
+                        В заключение хочу отметить, что мой основной мотиватор — это создание продуктов, которые действительно влияют на жизнь людей. Мне важно видеть, как мои решения помогают пользователям решать их повседневные задачи и улучшать качество их жизни. Именно это стремление к полезным и значимым результатам двигает меня вперед и вдохновляет на новые свершения.
+                    </p>
+                </div>
+            </div>
+            <button id="toggleButton" data-i18n="toggleButton">Развернуть</button>
         </div>
     </section>
-
     <section class="skills">
-    <h2>Навыки</h2>
-    <div class="skill-list">
-        <div class="skill-item" onclick="toggleSkillList('list1')">
-            <span>Языки программирования</span>
-            <i class="arrow-down"></i>
+        <h2 data-i18n="skills">Навыки</h2>
+        <div class="skill-list">
+            <div class="skill-item" onclick="toggleSkillList('list1')">
+                <span data-i18n="languagesProgramming">Языки программирования</span>
+                <i class="arrow-down"></i>
+            </div>
+            <ul id="list1" class="hidden skill-icons-list">
+                <li><img src="images/javascript.svg" alt="JavaScript" title="JavaScript" class="skill-icon"></li>
+                <li><img src="images/typescript.svg" alt="TypeScript" title="TypeScript" class="skill-icon"></li>
+                <li><img src="images/python.svg" alt="Python" title="Python" class="skill-icon"></li>
+                <li><img src="images/java.svg" alt="Java" title="Java" class="skill-icon"></li>
+                <li><img src="images/php.svg" alt="PHP" title="PHP" class="skill-icon"></li>
+                <li><img src="images/go.svg" alt="Go" title="Go" class="skill-icon"></li>
+                <li><img src="images/html-5.svg" alt="HTML" title="HTML" class="skill-icon"></li>
+                <li><img src="images/csharp.svg" alt="C#" title="C#" class="skill-icon"></li>
+                <li><img src="images/cpp.svg" alt="C++" title="C++" class="skill-icon"></li>
+            </ul>
+            <div class="skill-item" onclick="toggleSkillList('list2')">
+                <span data-i18n="frameworksLibraries">Фреймворки и библиотеки</span>
+                <i class="arrow-down"></i>
+            </div>
+            <ul id="list2" class="hidden skill-icons-list">
+                <li><img src="images/django.svg" alt="Django" title="Django" class="skill-icon"></li>
+                <li><img src="images/laravel.svg" alt="Laravel" title="Laravel" class="skill-icon"></li>
+                <li><img src="images/node-js.svg" alt="Node.js" title="Node.js" class="skill-icon"></li>
+                <li><img src="images/react.svg" alt="React" title="React" class="skill-icon"></li>
+            </ul>
+            <div class="skill-item" onclick="toggleSkillList('list3')">
+                <span data-i18n="developmentTools">Инструменты разработки</span>
+                <i class="arrow-down"></i>
+            </div>
+            <ul id="list3" class="hidden skill-icons-list">
+                <li><img src="images/docker.svg" alt="Docker" title="Docker" class="skill-icon"></li>
+                <li><img src="images/github.svg" alt="GitHub" title="GitHub" class="skill-icon"></li>
+                <li><img src="images/jenkins.svg" alt="Jenkins" title="Jenkins" class="skill-icon"></li>
+            </ul>
+            <div class="skill-item" onclick="toggleSkillList('list4')">
+                <span data-i18n="databases">Базы данных</span>
+                <i class="arrow-down"></i>
+            </div>
+            <ul id="list4" class="hidden skill-icons-list">
+                <li><img src="images/mongodb.svg" alt="MongoDB" title="MongoDB" class="skill-icon"></li>
+                <li><img src="images/mysql.svg" alt="MySQL" title="MySQL" class="skill-icon"></li>
+                <li><img src="images/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" class="skill-icon"></li>
+            </ul>
         </div>
-        <ul id="list1" class="hidden">
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C#</li>
-            <li>Go</li>
-            <li>C++</li>
-        </ul>
-
-        <div class="skill-item" onclick="toggleSkillList('list2')">
-            <span>Фреймворки и библиотеки</span>
-            <i class="arrow-down"></i>
-        </div>
-        <ul id="list2" class="hidden">
-            <li>React.js</li>
-            <li>Django</li>
-            <li>Node.js</li>
-        </ul>
-
-        <div class="skill-item" onclick="toggleSkillList('list3')">
-            <span>Инструменты разработки</span>
-            <i class="arrow-down"></i>
-        </div>
-        <ul id="list3" class="hidden">
-            <li>Git</li>
-            <li>Docker</li>
-            <li>Jenkins</li>
-        </ul>
-
-        <div class="skill-item" onclick="toggleSkillList('list4')">
-            <span>Базы данных</span>
-            <i class="arrow-down"></i>
-        </div>
-        <ul id="list4" class="hidden">
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-        </ul>
-        
-        <div class="skill-item" onclick="toggleSkillList('list5')">
-            <span>Дополнительно</span>
-            <i class="arrow-down"></i>
-        </div>
-        <ul id="list5" class="hidden">
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-        </ul>
-    </div>
-</section>
-
+    </section>
     <section class="portfolio">
-        <h2>Примеры работ</h2>
+        <h2 data-i18n="portfolio">Примеры работ</h2>
         <div class="project-container">
             <div class="project animate">
                 <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 1">
-                <h3>Проект 1</h3>
+                <h3 data-i18n="project1">Проект 1</h3>
                 <div class="project-content">
-                    <p>Описание проекта 1...</p>
-                    <a href="https://example.com/project1" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription1">Описание проекта 1...</p>
+                    <a href="https://example.com/project1" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
             </div>
             <div class="project animate">
                 <img src="images/mad-designer.png" alt="Проект 2">
-                <h3>Проект 2</h3>
+                <h3 data-i18n="project2">Проект 2</h3>
                 <div class="project-content">
-                    <p>Описание проекта 2...</p>
-                    <a href="https://example.com/project2" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription2">Описание проекта 2...</p>
+                    <a href="https://example.com/project2" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
             </div>
             <div class="project animate">
                 <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 3">
-                <h3>Проект 3</h3>
+                <h3 data-i18n="project3">Проект 3</h3>
                 <div class="project-content">
-                    <p>Описание проекта 3...</p>
-                    <a href="https://example.com/project3" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription3">Описание проекта 3...</p>
+                    <a href="https://example.com/project3" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
             </div>
             <div class="project animate">
                 <img src="images/mad-designer.png" alt="Проект 4">
-                <h3>Проект 4</h3>
+                <h3 data-i18n="project4">Проект 4</h3>
                 <div class="project-content">
-                    <p>Описание проекта 4...</p>
-                    <a href="https://example.com/project4" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription4">Описание проекта 4...</p>
+                    <a href="https://example.com/project4" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
             </div>
             <div class="project animate">
                 <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 5">
-                <h3>Проект 5</h3>
+                <h3 data-i18n="project5">Проект 5</h3>
                 <div class="project-content">
-                    <p>Описание проекта 5...</p>
-                    <a href="https://example.com/project5" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription5">Описание проекта 5...</p>
+                    <a href="https://example.com/project5" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
             </div>
             <div class="project animate">
                 <img src="images/mad-designer.png" alt="Проект 6">
-                <h3>Проект 6</h3>
+                <h3 data-i18n="project6">Проект 6</h3>
                 <div class="project-content">
-                    <p>Описание проекта 6...</p>
-                    <a href="https://example.com/project6" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription6">Описание проекта 6...</p>
+                    <a href="https://example.com/project6" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
             </div>
-            <div class="project animate">
+            <!-- <div class="project animate">
                 <img src="images/cd6pcnkqjlr5r1ve4o7170gy0j2kbror.jpg" alt="Проект 7">
-                <h3>Проект 7</h3>
+                <h3 data-i18n="project7">Проект 7</h3>
                 <div class="project-content">
-                    <p>Описание проекта 7...</p>
-                    <a href="https://example.com/project7" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription7">Описание проекта 7...</p>
+                    <a href="https://example.com/project7" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
-            </div>
-            <div class="project animate">
+            </div> -->
+            <!-- <div class="project animate">
                 <img src="images/mad-designer.png" alt="Проект 8">
-                <h3>Проект 8</h3>
+                <h3 data-i18n="project8">Проект 8</h3>
                 <div class="project-content">
-                    <p>Описание проекта 8...</p>
-                    <a href="https://example.com/project8" target="_blank" class="project-link">Перейти к проекту</a>
+                    <p data-i18n="projectDescription8">Описание проекта 8...</p>
+                    <a href="https://example.com/project8" target="_blank" class="project-link" data-i18n="goToProject">Перейти к проекту</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
-
     <footer>
-        <p>&copy; 2025 Имя Фамилия. Все права защищены.</p>
+        <p data-i18n="footer">&copy; 2025 Александр Витко. Все права защищены.</p>
     </footer>
-
     <script src="js/script.js"></script>
+    <!-- Подключение скриптов -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Инициализация AOS
+        AOS.init();
+    </script>
 </body>
 </html>
